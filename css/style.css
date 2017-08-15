@@ -213,7 +213,8 @@ body {
 	width: 500px;
 }
 
-.login-hidden {
+.login-hidden,
+.profile-hidden {
 	position: relative;
 	display: none;
 }
@@ -734,7 +735,42 @@ input[name*="toggle"] {
 .delivery-service,
 .guarantee-service,
 .credit-service {
+	position: relative;
 	display: none;
+}
+
+.delivery-service::after,
+.guarantee-service::after,
+.credit-service::after {
+	content: "";
+	position: absolute;
+}
+
+.delivery-service::after {
+	top: 7px;
+	right: -660px;
+	width: 136px;
+	height: 164px;
+	background-image: url(../img/delivery.svg);
+	background-repeat: no-repeat;
+}
+
+.guarantee-service::after {
+	top: -20px;
+	right: -660px;
+	width: 171px;
+	height: 195px;
+	background-image: url(../img/warranty.svg);
+	background-repeat: no-repeat;
+}
+
+.credit-service::after {
+	top: -20px;
+	right: -660px;
+	width: 156px;
+	height: 188px;
+	background-image: url(../img/credit.svg);
+	background-repeat: no-repeat;
 }
 
 #btn-4:checked ~ .service-menu label[for="btn-4"],
@@ -772,19 +808,6 @@ input[name*="toggle"] {
 	top: 76px;
 	margin: 0;
 	width: 437px;
-}
-
-.delivery-service .service-img {
-	position: absolute;
-	top: 7px;
-	right: 80px;
-}
-
-.guarantee-service .service-img,
-.credit-service .service-img {
-	position: absolute;
-	top: -20px;
-	right: 80px;
 }
 
 .partners {
@@ -929,9 +952,15 @@ input[name*="toggle"] {
 
 .popup .cross {
 	position: absolute;
-	z-index: 110;
+	z-index: 120;
 	top: 15px;
 	right: 15px;
+	width: 55px;
+	height: 55px;
+	background-color: transparent;
+	background-image: url(../img/modal-close.svg);
+	background-repeat: no-repeat;
+	border: 0;
 	cursor: pointer;
 	opacity: 0.5;
 }
@@ -1098,6 +1127,12 @@ input[name*="toggle"] {
 	position: absolute;
 	top: 15px;
 	right: 15px;
+	width: 55px;
+	height: 55px;
+	background-color: transparent;
+	background-image: url(../img/modal-close.svg);
+	background-repeat: no-repeat;
+	border: 0;
 	opacity: 0.5;
 	cursor: pointer;
 }
@@ -1647,6 +1682,11 @@ input[name*="toggle"] {
 	background-color: #d9d9d9;
 }
 
+.pages .inactive:hover,
+.pages .inactive:active {
+	background-color: #ebebeb;
+}
+
 .pages .prev-page:active,
 .pages .next-page:active {
 	color: rgba(0, 0, 0, 0.3);
@@ -1823,7 +1863,7 @@ input[name*="toggle"] {
 	color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-user-block .footer-logout::before,
+.footer-user-block .footer-logout-show::before,
 .footer-user-block .footer-login::before {
 	content: "";
 	position: absolute;
@@ -1865,7 +1905,8 @@ input[name*="toggle"] {
 	opacity: 0.3;
 }
 
-.footer-user-block .footer-logout {
+.footer-user-block .footer-logout,
+.footer-user-block .footer-login-hidden {
 	position: relative;
 	display: none;
 }

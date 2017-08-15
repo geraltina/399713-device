@@ -17,7 +17,7 @@
 				<div class="user-block-right">
 					<div class="entering">
 						<a class="login" href="#">Войти</a>
-						<a class="profile visually-hidden" href="#"></a>
+						<a class="profile profile-hidden" href="#"></a>
 						<a class="logout" href="#">Выйти</a>
 					</div>
 					<div class="items-block">
@@ -184,17 +184,14 @@
 					<div class="delivery-service">
 						<h2 class="header-two">Доставка</h2>
 						<p class="service-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-						<img class="service-img delivery-img" src="img/delivery.svg" width="136" height="164" alt="Доставка">
 					</div>
 					<div class="guarantee-service">
 						<h2 class="header-two">Гарантия</h2>
 						<p class="service-text">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-						<img class="service-img delivery-img" src="img/warranty.svg" width="171" height="195" alt="Гарантия">
 					</div>
 					<div class="credit-service">
 						<h2 class="header-two">Кредит</h2>
 						<p class="service-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-						<img class="service-img delivery-img" src="img/credit.svg" width="156" height="188" alt="Кредит">
 					</div>
 				</div>
 			</section>
@@ -227,7 +224,7 @@
 				<div class="contacts">
 					<h2 class="header-two">Контакты</h2>
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-					<img class="map" src="img/map-mini.jpg" width="560" height="222">
+					<a href="#"><img class="map" src="img/map-mini.jpg" width="560" height="222"></a>
 					<a class="btn feedback upper-link" href="#">Напишите нам</a>
 				</div>
 			</section>
@@ -262,7 +259,7 @@
 		</footer>
 		<section class="popup">
 			<img class="big-map" src="img/map-big.jpg" width="994" height="593">
-			<img class="cross" src="img/modal-close.svg" width="55" height="55">
+			<button type="button" class="cross"></button>
 		</section>
 		<section class="feedback-form">
 			<form action="#" method="get" class="write-us">
@@ -280,7 +277,7 @@
 				<textarea cols="50" id="message" class="message-feedback" placeholder="В свободной форме"></textarea>
 				<button type="submit" class="upper-link feedback-button">Отправить</button>
 			</form>
-			<img class="cross-feedback" src="img/modal-close.svg" width="55" height="55">
+			<button type="button" class="cross-feedback"></button>
 		</section>
 		<script src="js/file.js"></script>
 	</body>
