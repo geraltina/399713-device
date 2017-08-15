@@ -7,15 +7,19 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<header class="main-header">
-			<div class="bg-orange-catalog"></div>
-			<a class="logo" href="index.html"><img src="img/logo.png" width="164" height="36" alt="Device"></a>
+		<header class="main-header page-header">
+			<a class="logo-picture logo" href="index.html"><img src="img/logo.png" width="164" height="36" alt="Device"></a>
 			<section class="user-block">
-				<div class="search-wrapper">
-					<input type="text" name="search" id="search" placeholder="Поиск по сайту" class="search-field">
-				</div>
+				<form class="search-wrapper">
+					<input type="search" name="search" id="search" placeholder="Поиск по сайту" class="search-field">
+					<button type="submit" class="visually-hidden">Найти</button>
+				</form>
 				<div class="user-block-right">
-					<a class="login" href="#">Валентин Петухов <span class="exit">Выйти</span></a>
+					<div class="entering">
+						<a class="login-hidden" href="#">Войти</a>
+						<a class="login" href="#">Валентин Петухов</a>
+						<a class="logout-show" href="#">Выйти</a>
+					</div>
 					<div class="items-block">
 						<a class="comparison" href="#">Сравнить</a>
 						<a class="basket" href="#">Корзина</a>
@@ -25,31 +29,31 @@
 			<nav class="main-menu">
 				<ul class="menu-list">
 					<li class="upper-link"><a href="#" class="catalog-link">Каталог товаров <span class="plus-menu">+</span></a>
-						<ul class="sub-menu">
+						<section class="sub-menu">
 							<div class="wrapper">
 								<div class="column first-column">
-									<li><a href="#">Виртуальная реальность</a></li>
-									<li><a href="catalog.html">Моноподы для селфи</a></li>
-									<li><a href="#">Экшн-камеры</a></li>
+									<a href="#">Виртуальная реальность</a>
+									<a href="catalog.html">Моноподы для селфи</a>
+									<a href="#">Экшн-камеры</a>
 								</div>
 								<div class="column second-column">
-									<li><a href="#">Фитнес-браслеты</a></li>
-									<li><a href="#">Умные часы</a></li>
+									<a href="#">Фитнес-браслеты</a>
+									<a href="#">Умные часы</a>
 								</div>
 								<div class="column third-column">
-									<li><a href="#">Квадрокоптеры</a></li>
+									<a href="#">Квадрокоптеры</a>
 								</div>
 							</div>
-						</ul>
+						</section>
 					</li>
 				</ul>
-				<ul class="menu-list info">
+				<section class="menu-list info">
 					<div class="delivery-and-warranty">
-						<li><a class="upper-link delivery" href="#">Доставка</a></li>
-						<li><a class="upper-link warranty" href="#">Гарантия</a></li>
+						<a class="upper-link delivery" href="#">Доставка</a>
+						<a class="upper-link warranty" href="#">Гарантия</a>
 					</div>
-					<li><a class="upper-link contacts" href="#">Контакты</a></li>
-				</ul>
+					<a class="upper-link contacts" href="#">Контакты</a>
+				</section>
 			</nav>
 		</header>
 		<main class="inner-page">
@@ -57,42 +61,39 @@
 			<ul class="breadcrumbs">
 				<li><a href="#">Главная</a></li>
 				<li><a href="#">Каталог товаров</a></li>
-				<li><a href="#">Моноподы для селфи</a></li>
+				<li><a class="active">Моноподы для селфи</a></li>
 			</ul>
 			<div class="products-block">
 				<section class="filter">
 					<b class="filter-link lower-link">Фильтр:</b>
-					<div class="filter-items">
-					<div class="price">
-						<hr>
-						<b class="filter-type filter-price">Стоимость</b>
-						<div class="range-controls" id="range">
-							<div class="scale">
-								<div class="bar"></div>
+					<form class="filter-items" action="#" method="get">
+						<fieldset class="price">
+							<legend class="filter-type filter-price">Стоимость</legend>
+							<div class="range-controls" id="range">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="controller controller-left"></div>
+								<div class="controller controller-right"></div>
 							</div>
-							<div class="controller controller-left"></div>
-							<div class="controller controller-right"></div>
-						</div>
-						<span class="price-number price-min">от 0</span>
-						<span class="price-number price-max">до 5000</span>
-					</div>
-					<div class="color">
-						<hr>
-						<b class="filter-type filter-color">Цвет</b>
-						<div><input type="checkbox" name="black" id="black" class="color-check" checked><label for="black" class="filter-check">Чёрный</label></div>
-						<div><input type="checkbox" name="white" id="white" class="color-check"><label for="white" class="filter-check">Белый</label></div>
-						<div><input type="checkbox" name="blue" id="blue" class="color-check" checked><label for="blue" class="filter-check">Синий</label></div>
-						<div><input type="checkbox" name="red" id="red" class="color-check" checked><label for="red" class="filter-check">Красный</label></div>
-						<div><input type="checkbox" name="pink" id="pink" class="color-check"><label for="pink" class="filter-check">Розовый</label></div>
-					</div>
-					<div class="bluetooth">
-						<hr>
-						<b class="filter-type filter-bluetooth">Bluetooth</b>
-						<div><input type="radio" name="bluetooth" id="yes" class="bluetooth-check" checked><label for="yes" class="filter-check">Есть</label></div>
-						<div><input type="radio" name="bluetooth" id="no" class="bluetooth-check"><label for="no" class="filter-check">Нет</label></div>
-					</div>
-					<button type="submit" class="show upper-link">Показать</button>
-					</div>
+							<span class="price-number price-min">от 0</span>
+							<span class="price-number price-max">до 5000</span>
+						</fieldset>
+						<fieldset class="color">
+							<legend class="filter-type filter-color">Цвет</legend>
+							<div><input type="checkbox" name="black" id="black" class="color-check" checked><label for="black" class="filter-check">Чёрный</label></div>
+							<div><input type="checkbox" name="white" id="white" class="color-check"><label for="white" class="filter-check">Белый</label></div>
+							<div><input type="checkbox" name="blue" id="blue" class="color-check" checked><label for="blue" class="filter-check">Синий</label></div>
+							<div><input type="checkbox" name="red" id="red" class="color-check" checked><label for="red" class="filter-check">Красный</label></div>
+							<div><input type="checkbox" name="pink" id="pink" class="color-check"><label for="pink" class="filter-check">Розовый</label></div>
+						</fieldset>
+						<fieldset class="bluetooth">
+							<legend class="filter-type filter-bluetooth">Bluetooth</legend>
+							<div><input type="radio" name="bluetooth" id="yes" class="bluetooth-check" checked><label for="yes" class="filter-check">Есть</label></div>
+							<div><input type="radio" name="bluetooth" id="no" class="bluetooth-check"><label for="no" class="filter-check">Нет</label></div>
+						</fieldset>
+						<button type="submit" class="show upper-link">Показать</button>
+					</form>
 				</section>
 				<section class="sorting-and-products">
 					<div class="sorting">
@@ -115,8 +116,8 @@
 								<span class="price">500 руб.</span>
 							</div>
 							<div class="hover-layer">
-								<button type="button" class="upper-link">В корзину</button>
-								<button type="button" class="add-to-comparison">Добавить к сравнению</button>
+								<a class="upper-link" href="#">В корзину</a>
+								<a class="add-to-comparison" href="#">Добавить к сравнению</a>
 							</div>
 						</article>
 						<article class="product-item">
@@ -126,8 +127,8 @@
 								<span class="price">1 500 руб.</span>
 							</div>
 							<div class="hover-layer">
-								<button type="button" class="upper-link">В корзину</button>
-								<button type="button" class="add-to-comparison">Добавить к сравнению</button>
+								<a class="upper-link" href="#">В корзину</a>
+								<a class="add-to-comparison" href="#">Добавить к сравнению</a>
 							</div>
 						</article>
 						<article class="product-item">
@@ -137,8 +138,8 @@
 								<span class="price">2 500 руб.</span>
 							</div>
 							<div class="hover-layer">
-								<button type="button" class="upper-link">В корзину</button>
-								<button type="button" class="add-to-comparison">Добавить к сравнению</button>
+								<a class="upper-link" href="#">В корзину</a>
+								<a class="add-to-comparison" href="#">Добавить к сравнению</a>
 							</div>
 						</article>
 						<article class="product-item">
@@ -148,8 +149,8 @@
 								<span class="price">4 900 руб.</span>
 							</div>
 							<div class="hover-layer">
-								<button type="button" class="upper-link">В корзину</button>
-								<button type="button" class="add-to-comparison">Добавить к сравнению</button>
+								<a class="upper-link" href="#">В корзину</a>
+								<a class="add-to-comparison" href="#">Добавить к сравнению</a>
 							</div>
 						</article>
 						<div class="pages">
@@ -191,7 +192,7 @@
 					<a class="footer-basket footer-user-link" href="#">Корзина</a>
 				</div>
 				<p class="phone">Тел: +7 (495) 495-95-95</p>
-				<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/copyright.png" width="27" height="34" alt="HTML Academy"></a>
+				<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy"></a>
 			</section>
 		</footer>
 		<script src="js/file.js"></script>
