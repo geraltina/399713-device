@@ -43,7 +43,7 @@
 body {
 	margin-left: auto;
 	margin-right: auto;
-	width: 1200px;
+	min-width: 1200px;
 	font-weight: lighter;
 	font-size: 15px;
 	line-height: 30px;
@@ -93,10 +93,13 @@ body {
 /*Хедер*/
 .main-header {
 	position: relative;
-	padding-left: 80px;
-	padding-right: 80px;
+	padding-left: 60px;
+	padding-right: 60px;
 	padding-top: 24px;
 	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
 	background-color: #f7e296;
 }
 
@@ -169,9 +172,7 @@ body {
 	width: 356px;
 	height: 2px;
 	background-color: black;
-	animation-name: search-bigger-line;
-	animation-duration: 0.5s;
-	animation-timing-function: ease-in-out;
+	
 }
 
 .search-wrapper .search-button:hover {
@@ -182,6 +183,12 @@ body {
 .search-wrapper .search-button:active {
 	background-color: black;
 	color: rgba(255, 255, 255, 0.3);
+}
+
+.search-wrapper:focus + .search-button::before {
+	animation-name: search-bigger-line;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
 }
 
 .search-wrapper .search-field {
@@ -335,11 +342,11 @@ body {
 .main-menu .sub-menu {
 	position: absolute;
 	z-index: 100;
-	left: -80px;
+	left: -60px;
 	display: none;
 	padding-top: 30px;
 	padding-left: 80px;
-	width: 1140px;
+	width: 1040px;
 	min-height: 120px;
 	font-weight: lighter;
 	font-size: 15px;
@@ -373,19 +380,31 @@ body {
 
 
 /*Главная страница*/
+.main-page {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1440px;
+}
+
+.promo {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+}
+
 .sliders {
 	position: absolute;
-	top: 215px;
-	margin-left: 110px;
+	top: -600px;
+	left: 130px;
 	margin-top: 6px;
-	margin-bottom: 106px;
 }
 
 .sliders::before {
 	content: "";
 	position: absolute;
 	top: 33px;
-	left: 510px;
+	left: 477px;
 	width: 100px;
 	height: 7px;
 	background-color: white;
@@ -438,21 +457,21 @@ input[name*="toggle"] {
 }
 
 .slider-1 {
-	left: 910px;
+	left: 890px;
 }
 
 .slider-2 {
-	left: 943px;
+	left: 923px;
 }
 
 .slider-3 {
-	left: 976px;
+	left: 956px;
 }
 
 .promo-text .number {
 	position: absolute;
 	top: -7px;
-	left: 840px;
+	left: 800px;
 	font-weight: bold;
 	font-size: 179.2px;
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -464,7 +483,7 @@ input[name*="toggle"] {
 .promo-text .inline-right {
 	position: absolute;
 	top: 79px;
-	left: 510px;
+	left: 477px;
 }
 
 .promo-text b {
@@ -516,7 +535,7 @@ input[name*="toggle"] {
 .promo-item .promo-details {
 	position: relative;
 	top: -83px;
-	left: 510px;
+	left: 477px;
 	min-width: 445px;
 	max-width: 560px;
 }
@@ -557,8 +576,9 @@ input[name*="toggle"] {
 .products-index {
 	display: flex;
 	justify-content: space-between;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1160px;
 }
 
 .products-index .products-group {
@@ -678,22 +698,26 @@ input[name*="toggle"] {
 
 .service {
 	position: relative;
-	display: flex;
-}
-
-.service::after {
-	content: "";
-	position: absolute;
-	z-index: -3;
-	top: 20px;
-	left: 0;
-	width: 1200px;
-	height: 288px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1440px;
+	min-height: 288px;
 	background-color: #e5e5e5;
 }
 
+.service-wrapper {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	box-sizing: border-box;
+}
+
 .service-menu-list {
-	position: relative;
+	position: absolute;
+	top: -20px;
+	left: 120px;
+	z-index: 100;
 	margin: 0;
 	margin-right: 7px;
 	padding-left: 0;
@@ -779,13 +803,15 @@ input[name*="toggle"] {
 }
 
 .service-slider {
-	padding-left: 116px;
+	padding-left: 20px;
 }
 
 .delivery-service,
 .guarantee-service,
 .credit-service {
-	position: relative;
+	position: absolute;
+	top: -20px;
+	left: 540px;
 	display: none;
 }
 
@@ -864,7 +890,10 @@ input[name*="toggle"] {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 200px;
-	padding: 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	width: 1200px;
 }
 
 .partner {
@@ -910,7 +939,11 @@ input[name*="toggle"] {
 	display: flex;
 	margin-top: 93px;
 	margin-bottom: 95px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0 20px;
+	width: 1200px;
+	box-sizing: border-box;
 }
 
 .information .header-two {
@@ -1196,9 +1229,16 @@ input[name*="toggle"] {
 }
 
 /*Каталог*/
+.inner-page {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1440px;
+	box-sizing: border-box;
+}
+
 .inner-page .header-one,
 .inner-page .breadcrumbs {
-	padding-left: 80px;
+	padding-left: 175px;
 }
 
 .inner-page .header-one {
@@ -1260,7 +1300,7 @@ input[name*="toggle"] {
 }
 
 .filter {
-	min-width: 348px;
+	min-width: 468px;
 }
 
 .filter .price,
@@ -1288,7 +1328,7 @@ input[name*="toggle"] {
 
 .filter-link {
 	display: block;
-	padding-left: 80px;
+	padding-left: 175px;
 	padding-top: 27px;
 	padding-bottom: 27px;
 	background-color: #dcdcdc;
@@ -1298,7 +1338,7 @@ input[name*="toggle"] {
 	position: relative;
 	z-index: 0;
 	height: 100%;
-	padding-left: 80px;
+	padding-left: 175px;
 	padding-top: 69px;
 	box-sizing: border-box;
 }
@@ -1527,10 +1567,10 @@ input[name*="toggle"] {
 	display: flex;
 	align-items: center;
 	padding-left: 72px;
-	padding-right: 20px;
 	min-height: 69px;
-	width: 760px;
+	width: 881px;
 	background-color: #efefef;
+	box-sizing: border-box;
 }
 
 .sorting .lower-link {
@@ -1568,7 +1608,7 @@ input[name*="toggle"] {
 .sorting .arrows {
 	position: absolute;
 	top: 30px;
-	right: 20px;
+	right: 55px;
 	line-height: 9px;
 }
 
@@ -1788,10 +1828,22 @@ input[name*="toggle"] {
 	align-items: flex-start;
 	padding-top: 60px;
 	padding-bottom: 64px;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1440px;
 	color: white;
 	background-color: #464646;
+	box-sizing: border-box;
+}
+
+.footer-wrapper {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 1200px;
+	box-sizing: border-box;
 }
 
 .page-footer .footer-logo:hover {
