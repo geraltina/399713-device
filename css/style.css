@@ -99,8 +99,9 @@ body {
 	margin-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1000px;
+	width: 1160px;
 	background-color: #f7e296;
+	box-sizing: border-box;
 }
 
 .index-header {
@@ -346,7 +347,7 @@ body {
 	display: none;
 	padding-top: 30px;
 	padding-left: 80px;
-	width: 1040px;
+	width: 1080px;
 	min-height: 120px;
 	font-weight: lighter;
 	font-size: 15px;
@@ -1238,9 +1239,16 @@ input[name*="toggle"] {
 	box-sizing: border-box;
 }
 
+.inner-page-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	box-sizing: border-box;
+}
+
 .inner-page .header-one,
 .inner-page .breadcrumbs {
-	padding-left: 175px;
+	padding-left: 100px;
 }
 
 .inner-page .header-one {
@@ -1302,7 +1310,7 @@ input[name*="toggle"] {
 }
 
 .filter {
-	min-width: 468px;
+	max-width: 468px;
 }
 
 .filter .price,
@@ -1330,7 +1338,7 @@ input[name*="toggle"] {
 
 .filter-link {
 	display: block;
-	padding-left: 175px;
+	padding-left: 100px;
 	padding-top: 27px;
 	padding-bottom: 27px;
 	background-color: #dcdcdc;
@@ -1340,7 +1348,7 @@ input[name*="toggle"] {
 	position: relative;
 	z-index: 0;
 	height: 100%;
-	padding-left: 175px;
+	padding-left: 100px;
 	padding-top: 69px;
 	box-sizing: border-box;
 }
@@ -1569,8 +1577,9 @@ input[name*="toggle"] {
 	display: flex;
 	align-items: center;
 	padding-left: 72px;
+	margin-right: auto;
 	min-height: 69px;
-	width: 881px;
+	max-width: 890px;
 	background-color: #efefef;
 	box-sizing: border-box;
 }
