@@ -64,40 +64,43 @@
 				<li><a href="#">Каталог товаров</a></li>
 				<li><a class="active">Моноподы для селфи</a></li>
 			</ul>
+			</div>
 			<div class="products-block">
+				<div class="products-block-wrapper">
 				<section class="filter">
-					<b class="filter-link lower-link">Фильтр:</b>
-					<form class="filter-items" action="#" method="get">
-						<fieldset class="price">
-							<legend class="filter-type filter-price">Стоимость</legend>
-							<div class="range-controls" id="range">
-								<div class="scale">
-									<div class="bar"></div>
+						<form class="filter-items" action="#" method="get">
+							<b class="filter-link lower-link">Фильтр:</b>
+							<fieldset class="price">
+								<legend class="filter-type filter-price">Стоимость</legend>
+								<div class="range-controls" id="range">
+									<div class="scale">
+										<div class="bar"></div>
+									</div>
+									<div class="controller controller-left"></div>
+									<div class="controller controller-right"></div>
 								</div>
-								<div class="controller controller-left"></div>
-								<div class="controller controller-right"></div>
-							</div>
-							<span class="price-number price-min">от 0</span>
-							<span class="price-number price-max">до 5000</span>
-						</fieldset>
-						<fieldset class="color">
-							<legend class="filter-type filter-color">Цвет</legend>
-							<div><input type="checkbox" name="black" id="black" class="color-check" checked><label for="black" class="filter-check">Чёрный</label></div>
-							<div><input type="checkbox" name="white" id="white" class="color-check"><label for="white" class="filter-check">Белый</label></div>
-							<div><input type="checkbox" name="blue" id="blue" class="color-check" checked><label for="blue" class="filter-check">Синий</label></div>
-							<div><input type="checkbox" name="red" id="red" class="color-check" checked><label for="red" class="filter-check">Красный</label></div>
-							<div><input type="checkbox" name="pink" id="pink" class="color-check"><label for="pink" class="filter-check">Розовый</label></div>
-						</fieldset>
-						<fieldset class="bluetooth">
-							<legend class="filter-type filter-bluetooth">Bluetooth</legend>
-							<div><input type="radio" name="bluetooth" id="yes" class="bluetooth-check" checked><label for="yes" class="filter-check">Есть</label></div>
-							<div><input type="radio" name="bluetooth" id="no" class="bluetooth-check"><label for="no" class="filter-check">Нет</label></div>
-						</fieldset>
-						<button type="submit" class="show upper-link">Показать</button>
-					</form>
+								<span class="price-number price-min">от 0</span>
+								<span class="price-number price-max">до 5000</span>
+							</fieldset>
+							<fieldset class="color">
+								<legend class="filter-type filter-color">Цвет</legend>
+								<div><input type="checkbox" name="black" id="black" class="color-check" checked><label for="black" class="filter-check">Чёрный</label></div>
+								<div><input type="checkbox" name="white" id="white" class="color-check"><label for="white" class="filter-check">Белый</label></div>
+								<div><input type="checkbox" name="blue" id="blue" class="color-check" checked><label for="blue" class="filter-check">Синий</label></div>
+								<div><input type="checkbox" name="red" id="red" class="color-check" checked><label for="red" class="filter-check">Красный</label></div>
+								<div><input type="checkbox" name="pink" id="pink" class="color-check"><label for="pink" class="filter-check">Розовый</label></div>
+							</fieldset>
+							<fieldset class="bluetooth">
+								<legend class="filter-type filter-bluetooth">Bluetooth</legend>
+								<div><input type="radio" name="bluetooth" id="yes" class="bluetooth-check" checked><label for="yes" class="filter-check">Есть</label></div>
+								<div><input type="radio" name="bluetooth" id="no" class="bluetooth-check"><label for="no" class="filter-check">Нет</label></div>
+							</fieldset>
+							<button type="submit" class="show upper-link">Показать</button>
+						</form>
 				</section>
 				<section class="sorting-and-products">
 					<div class="sorting">
+						<div class="sorting-wrapper">
 						<b class="lower-link">Сортировка:</b>
 						<div class="sorting-types">
 							<a href="#" class="sorting-type active">По цене</a>
@@ -108,12 +111,13 @@
 							<a href="#" class="up">Сортировка от меньшего к большему</a>
 							<a href="#" class="down">Сортировка от большего к меньшему</a>
 						</div>
+						</div>
 					</div>
 					<div class="products">
 						<article class="product-item">
 							<img src="img/item-1.jpg" class="product-picture" width="360" height="380">
 							<div class="wrapper">
-								<h2>Любительская селфи-палка</h2>
+								<h2><a href="#" class="name">Любительская селфи-палка</a></h2>
 								<span class="price">500 руб.</span>
 							</div>
 							<div class="hover-layer">
@@ -124,7 +128,7 @@
 						<article class="product-item">
 							<img src="img/item-2.jpg" class="product-picture" width="360" height="380">
 							<div class="wrapper">
-								<h2>Профессиональная селфи-палка</h2>
+								<h2><a href="#" class="name">Профессиональная селфи-палка</a></h2>
 								<span class="price">1 500 руб.</span>
 							</div>
 							<div class="hover-layer">
@@ -135,7 +139,7 @@
 						<article class="product-item">
 							<img src="img/item-3.jpg" class="product-picture" width="360" height="380">
 							<div class="wrapper">
-								<h2>Непотопляемая селфи-палка</h2>
+								<h2><a href="#" class="name">Непотопляемая селфи-палка</a></h2>
 								<span class="price">2 500 руб.</span>
 							</div>
 							<div class="hover-layer">
@@ -146,7 +150,7 @@
 						<article class="product-item">
 							<img src="img/item-4.jpg" class="product-picture" width="360" height="380">
 							<div class="wrapper">
-								<h2>Селфи-палка «Следуй за мной»</h2>
+								<h2><a href="#" class="name">Селфи-палка «Следуй за мной»</a></h2>
 								<span class="price">4 900 руб.</span>
 							</div>
 							<div class="hover-layer">
@@ -165,7 +169,7 @@
 						</div>
 					</div>
 				</section>
-			</div>
+				</div>
 			</div>
 		</main>
 		<footer class="page-footer">

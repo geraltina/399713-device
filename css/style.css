@@ -56,7 +56,7 @@ body {
 	font-size: 18px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	line-height: 20px;
-	letter-spacing: 3px;
+	letter-spacing: 4px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: black;
@@ -67,7 +67,7 @@ body {
 	font-size: 16px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	line-height: 16px;
-	letter-spacing: 3px;
+	letter-spacing: 4px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: black;
@@ -116,7 +116,7 @@ body {
 
 .main-header .logo-picture {
 	position: absolute;
-	top: -20px;
+	top: -18px;
 }
 
 .main-header .logo:hover {
@@ -131,7 +131,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 27px;
+	margin-top: 15px;
 	margin-bottom: 39px;
 	padding-top: 0;
 }
@@ -145,7 +145,7 @@ body {
 	content: "";
 	position: absolute;
 	top: 8px;
-	left: 0;
+	left: 5px;
 	width: 16px;
 	height: 16px;
 	background-image: url(../img/search.svg);
@@ -173,7 +173,6 @@ body {
 	width: 356px;
 	height: 2px;
 	background-color: black;
-	
 }
 
 .search-wrapper .search-button:hover {
@@ -186,7 +185,7 @@ body {
 	color: rgba(255, 255, 255, 0.3);
 }
 
-.search-wrapper:focus + .search-button::before {
+.search-field:focus + .search-button::before {
 	animation-name: search-bigger-line;
 	animation-duration: 0.5s;
 	animation-timing-function: ease-in-out;
@@ -194,6 +193,9 @@ body {
 
 .search-wrapper .search-field {
 	height: 16px;
+	font-size: 15px;
+	line-height: 36px;
+	font-family: inherit;
 	background-color: #f7e296;
 	border: 0;
 	opacity: 0.3;
@@ -211,7 +213,7 @@ body {
 .user-block .comparison,
 .user-block .basket {
 	position: relative;
-	padding-left: 26px;
+	padding-left: 22px;
 }
 
 .user-block-right a:hover,
@@ -271,6 +273,10 @@ body {
 	width: 500px;
 }
 
+.user-block-right .login {
+	padding-left: 28px;
+}
+
 .login-hidden,
 .profile-hidden {
 	position: relative;
@@ -279,18 +285,18 @@ body {
 
 .user-block-right .logout {
 	display: none;
-	margin-left: 20px;
+	margin-left: 18px;
 	opacity: 0.3;
 }
 
 .logout-show {
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 18px;
 	opacity: 0.3;
 }
 
 .items-block a {
-	margin-left: 30px;
+	margin-left: 37px;
 }
 
 .main-menu {
@@ -314,15 +320,16 @@ body {
 
 .main-menu .info {
 	display: flex;
+	margin-right: -7px;
 }
 
 .info .delivery-and-warranty {
 	display: flex;
-	margin-right: 113px;
+	margin-right: 105px;
 }
 
 .delivery-and-warranty a {
-	margin-right: 38px;
+	margin-right: 32px;
 }
 
 .delivery-and-warranty a:last-child {
@@ -331,8 +338,8 @@ body {
 
 .menu-list .plus-menu {
 	position: absolute;
-	top: -6px;
-	left: 207px;
+	top: -5px;
+	left: 220px;
 	padding-left: 10px;
 	font-weight: normal;
 	font-size: 32px;
@@ -1248,16 +1255,18 @@ input[name*="toggle"] {
 
 .inner-page .header-one,
 .inner-page .breadcrumbs {
-	padding-left: 100px;
+	padding-left: 80px;
 }
 
 .inner-page .header-one {
+	margin-top: 40px;
 	margin-bottom: 0;
+	letter-spacing: 1px;
 }
 
 .breadcrumbs {
-	margin-bottom: 15px;
-	margin-top: 21px;
+	margin-bottom: 40px;
+	margin-top: 18px;
 	list-style: none;
 }
 
@@ -1270,8 +1279,8 @@ input[name*="toggle"] {
 .breadcrumbs li::after {
 	content: "";
 	position: absolute;
-	top: 13px;
-	right: 15px;
+	top: 15px;
+	right: 13px;
 	width: 4px;
 	height: 7px;
 	background-image: url(../img/nav-arrow.svg);
@@ -1284,7 +1293,7 @@ input[name*="toggle"] {
 
 .breadcrumbs a {
 	position: relative;
-	margin-right: 39px;
+	margin-right: 35px;
 	font-size: 14px;
 	line-height: 36px;
 	text-decoration: none;
@@ -1306,11 +1315,64 @@ input[name*="toggle"] {
 }
 
 .products-block {
+	position: relative;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.products-block-wrapper {
+    margin-left: auto;
+	margin-right: auto;
 	display: flex;
+	width: 1200px;
 }
 
 .filter {
+	position: relative;
+	margin-left: auto;
 	max-width: 468px;
+	background-color: #efefef;
+}
+
+.filter::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	height: 69px;
+	width: 468px;
+	top: 0;
+	right: 0;
+	background-color: #dddddd;
+}
+
+.filter::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	width: 468px;
+	top: 0;
+	right: 0;
+	background-color: #efefef;
+}
+
+.filter-items {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	padding-left: 78px;
+	width: 348px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.filter-link {
+	position: relative;
+	z-index: 1;
+	display: block;
+	padding-top: 27px;
+	padding-bottom: 96px;
 }
 
 .filter .price,
@@ -1318,10 +1380,15 @@ input[name*="toggle"] {
 .filter .bluetooth {
 	position: relative;
 	padding-left: 0;
+	padding-right: 0;
 	padding-bottom: 0;
-	margin-bottom: 42px;
-	margin-top: 19px;
+	margin-bottom: 32px;
+	margin-top: 15px;
 	border: 0;
+}
+
+.filter fieldset.bluetooth {
+	margin-bottom: 40px;
 }
 
 .filter .price::before,
@@ -1329,39 +1396,11 @@ input[name*="toggle"] {
 .filter .bluetooth::before {
 	content: "";
 	position: absolute;
-	top: -19px;
+	top: -15px;
 	width: 201px;
 	height: 2px;
 	background-color: black;
 	border: 0;
-}
-
-.filter-link {
-	display: block;
-	padding-left: 100px;
-	padding-top: 27px;
-	padding-bottom: 27px;
-	background-color: #dcdcdc;
-}
-
-.filter-items {
-	position: relative;
-	z-index: 0;
-	height: 100%;
-	padding-left: 100px;
-	padding-top: 69px;
-	box-sizing: border-box;
-}
-
-.filter-items::after {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #efefef;
 }
 
 .filter-type {
@@ -1376,15 +1415,15 @@ input[name*="toggle"] {
 }
 
 .filter-price {
-	margin-bottom: 38px;
+	margin-bottom: 33px;
 }
 
 .filter-color {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 .filter-bluetooth {
-	margin-bottom: 32px;
+	margin-bottom: 20px;
 }
 
 .range-controls {
@@ -1393,8 +1432,8 @@ input[name*="toggle"] {
 
 .range-controls .scale {
 	position: relative;
-	margin-bottom: 16px;
-	margin-left: 11px;
+	margin-bottom: 5px;
+	margin-left: 0;
 	width: 190px;
 	height: 2px;
 	background-color: #dbdbdb;
@@ -1427,22 +1466,24 @@ input[name*="toggle"] {
 }
 
 .controller-left {
-	left: 0;
+	left: -6px;
 }
 
 .controller-left:active {
-	left: -2px;
+	left: -8px;
 }
 
 .controller-right {
-	left: 115px;
+	left: 105px;
 }
 
 .controller-right:active {
-	left: 114px;
+	left: 104px;
 }
 
 .price-number {
+	display: inline-block;
+	margin-top: 0px;
 	font-size: 14px;
 	line-height: 22.27px;
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -1450,7 +1491,8 @@ input[name*="toggle"] {
 }
 
 .price-min {
-	margin-right: 65px;
+	margin-left: -3px;
+	margin-right: 61px;
 }
 
 .color .color-check,
@@ -1511,8 +1553,8 @@ input[name*="toggle"] {
 	position: absolute;
 	top: 6px;
 	left: 0;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	border: 4px solid #000000;
 	border-radius: 50%;
 }
@@ -1522,8 +1564,8 @@ input[name*="toggle"] {
 	position: absolute;
 	top: 14px;
 	left: 8px;
-	width: 4px;
-	height: 4px;
+	width: 2px;
+	height: 2px;
 	background-color: black;
 	box-shadow: 0 0 0 4px #ffffff, 
 				0 0 0 8px #000000;
@@ -1544,6 +1586,7 @@ input[name*="toggle"] {
 	z-index: 10;
 	padding: 0;
 	padding-left: 42px;
+	width: 120px;
 	border: 0;
 	background-color: transparent;
 	letter-spacing: 4px;
@@ -1574,23 +1617,37 @@ input[name*="toggle"] {
 
 .sorting {
 	position: relative;
+	max-width: 972px;
+}
+
+.sorting::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	width: 926px;
+	height: 70px;
+	background-color: #efefef;
+}
+
+.sorting .sorting-wrapper {
 	display: flex;
 	align-items: center;
 	padding-left: 72px;
 	margin-right: auto;
+	width: 852px;
 	min-height: 69px;
-	max-width: 890px;
 	background-color: #efefef;
 	box-sizing: border-box;
 }
 
 .sorting .lower-link {
 	padding: 0;
-	margin-right: 55px;
+	margin-right: 48px;
 }
 
 .sorting .sorting-type {
-	margin-right: 30px;
+	margin-right: 23px;
 	color: black;
 	text-decoration: none;
 	opacity: 0.3;
@@ -1618,8 +1675,8 @@ input[name*="toggle"] {
 
 .sorting .arrows {
 	position: absolute;
-	top: 30px;
-	right: 55px;
+	top: 27px;
+	left: 790px;
 	line-height: 9px;
 }
 
@@ -1634,9 +1691,9 @@ input[name*="toggle"] {
 }
 
 .arrows .up {
-	margin-right: 26px;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
+	margin-right: 18px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
 	border-bottom: 11px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -1649,8 +1706,8 @@ input[name*="toggle"] {
 }
 
 .arrows .down {
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
 	border-top: 11px solid rgba(0, 0, 0, 1);
 }
 
@@ -1676,7 +1733,7 @@ input[name*="toggle"] {
 
 .product-item .product-picture {
 	position: relative;
-	z-index: -2;
+	z-index: 0;
 }
 
 .product-item .wrapper {
@@ -1684,24 +1741,32 @@ input[name*="toggle"] {
 	align-items: flex-start;
 	justify-content: space-between;
 	margin-top: 27px;
-	margin-bottom: 70px;
+	margin-bottom: 55px;
 }
 
 .product-item h2 {
 	margin: 0;
 	width: 254px;
+}
+
+.product-item .name {
+	display: block;
+	margin: 0;
+	padding: 0;
 	font-weight: bold;
 	font-size: 18px;
 	font-family: "Gilroy", "Arial", sans-serif;
-	line-height: 18px;
-	letter-spacing: 1px;
+	line-height: 19px;
+	letter-spacing: 0;
+	text-decoration: none;
 	color: black;
 }
 
 .product-item .price {
 	font-size: 16px;
-	line-height: 18px;
-	letter-spacing: 1px;
+	line-height: 20px;
+	font-family: "Gilroy", "Arial", sans-serif;
+	letter-spacing: 0;
 }
 
 .hover-layer {
@@ -1781,9 +1846,12 @@ input[name*="toggle"] {
 	background-color: #efefef;
 }
 
-.pages .prev-page,
-.pages .next-page {
+.pages .prev-page {
 	padding: 27px 30px;
+}
+
+.pages .next-page {
+	padding: 27px 23px;
 }
 
 .pages .prev-page:hover,
@@ -1802,7 +1870,7 @@ input[name*="toggle"] {
 }
 
 .pages .page-number {
-	margin-right: 32px;
+	margin-right: 28px;
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 16px;
@@ -1837,7 +1905,7 @@ input[name*="toggle"] {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding-top: 60px;
+	padding-top: 63px;
 	padding-bottom: 64px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1872,7 +1940,7 @@ input[name*="toggle"] {
 .page-footer .inline-left::after {
 	content: "";
 	position: absolute;
-	bottom: 0;
+	bottom: 37px;
 	width: 80px;
 	height: 7px;
 	background-color: #ffc600;
@@ -1881,8 +1949,8 @@ input[name*="toggle"] {
 .page-footer .adress {
 	padding: 0;
 	margin: 0;
-	margin-top: 37px;
-	margin-bottom: 87px;
+	margin-top: 25px;
+	margin-bottom: 75px;
 }
 
 .page-footer .inline-center {
