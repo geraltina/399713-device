@@ -697,30 +697,35 @@ input[name*="toggle"] {
 }
 
 .service {
-	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1440px;
+	max-width: 1440px;
 	min-height: 288px;
 	background-color: #e5e5e5;
 }
 
 .service-wrapper {
+	position: relative;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1200px;
-	box-sizing: border-box;
+}
+
+.service-menu {
+	position: relative;
+	z-index: 100;
+	margin: 0;
+	margin-left: 20px;
+	margin-top: -20px;
+	margin-right: 7px;
 }
 
 .service-menu-list {
-	position: absolute;
-	top: -20px;
-	left: 120px;
-	z-index: 100;
 	margin: 0;
-	margin-right: 7px;
 	padding-left: 0;
+	display: flex;
+	flex-direction: column;
 	width: 300px;
 	list-style: none;
 }
@@ -729,7 +734,7 @@ input[name*="toggle"] {
 	content: "";
 	position: absolute;
 	top: -80px;
-	right: -5px;
+	right: 15px;
 	width: 7px;
 	height: 319px;
 	background-color: black;
@@ -737,7 +742,6 @@ input[name*="toggle"] {
 
 .service-menu-item {
 	position: relative;
-	margin-left: 20px;
 	margin-bottom: 25px;
 	padding: 11px 20px;
 }
@@ -803,15 +807,13 @@ input[name*="toggle"] {
 }
 
 .service-slider {
-	padding-left: 20px;
+	padding-left: 100px;
 }
 
 .delivery-service,
 .guarantee-service,
 .credit-service {
-	position: absolute;
-	top: -20px;
-	left: 540px;
+	position: relative;
 	display: none;
 }
 
