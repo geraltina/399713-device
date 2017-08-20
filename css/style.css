@@ -41,6 +41,7 @@
 }
 
 body {
+	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 1200px;
@@ -1771,6 +1772,12 @@ input[name*="toggle"] {
 	letter-spacing: 0;
 }
 
+.new-product {
+	position: absolute;
+	top: 29px;
+	right: 27px;
+}
+
 .hover-layer {
 	position: absolute;
 	z-index: 0;
@@ -1788,8 +1795,7 @@ input[name*="toggle"] {
 	position: relative;
 	display: block;
 	margin-top: 45px;
-	padding-left: 28px;
-	width: 147px;
+	padding-left: 24px;
 	background-color: transparent;
 	border: 0;
 	cursor: pointer;
@@ -1818,9 +1824,11 @@ input[name*="toggle"] {
 }
 
 .hover-layer .add-to-comparison {
+	padding-left: 20px;
 	margin-top: 10px;
 	font-size: 13px;
 	line-height: 36px;
+	letter-spacing: 1px;
 	color: rgba(0, 0, 0, 0.5);
 	background-color: transparent;
 	border: 0;
@@ -1863,7 +1871,7 @@ input[name*="toggle"] {
 
 .pages .inactive:hover,
 .pages .inactive:active {
-	background-color: #ebebeb;
+	background-color: #efefef;
 }
 
 .pages .prev-page:active,
