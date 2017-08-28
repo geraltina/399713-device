@@ -167,7 +167,7 @@ body {
 .search-wrapper::before {
 	content: "";
 	position: absolute;
-	top: 8px;
+	top: 11px;
 	left: 5px;
 	width: 16px;
 	height: 16px;
@@ -1532,29 +1532,37 @@ input[name*="toggle"] {
 	padding-left: 0;
 	padding-right: 0;
 	padding-bottom: 0;
-	margin-bottom: 32px;
+	margin-bottom: 27px;
 	margin-top: 15px;
 	border: 0;
 }
 
-.filter fieldset.bluetooth {
-	margin-bottom: 40px;
-}
-
-.filter fieldset.price {
+.filter .price {
 	min-height: 93px;
 }
 
-.filter .price::before,
-.filter .color::before,
-.filter .bluetooth::before {
+.filter .filter-link::before,
+.filter .filter-link::after,
+.filter .show::after {
 	content: "";
 	position: absolute;
-	top: -15px;
+	left: 2px;
 	width: 201px;
 	height: 2px;
 	background-color: black;
 	border: 0;
+}
+
+.filter .filter-link::before {
+	top: 139px;
+}
+
+.filter .filter-link::after {
+	top: 280px;
+}
+
+.filter .show::after {
+	top: -172px;
 }
 
 .filter-type {
@@ -1661,7 +1669,7 @@ input[name*="toggle"] {
 	display: block;
 	padding-left: 40px;
 	font-size: 14px;
-	line-height: 40px;
+	line-height: 39px;
 	cursor: pointer;
 }
 
@@ -1700,7 +1708,8 @@ input[name*="toggle"] {
 
 .filter .bluetooth {
 	padding: 0;
-	margin-bottom: 52px;
+	margin-top: 25px;
+	margin-bottom: 40px;
 }
 
 .bluetooth-check + .filter-check::before {
