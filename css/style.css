@@ -18,7 +18,7 @@
 	font-family: "Gilroy";
 	src: url(../fonts/gilroylight.woff2) format("woff2"),
 		url(../fonts/gilroylight.woff) format("woff");
-	font-weight: lighter;
+	font-weight: 300;
 	font-style: normal;
 }
 
