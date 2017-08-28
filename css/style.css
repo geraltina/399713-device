@@ -1541,6 +1541,10 @@ input[name*="toggle"] {
 	margin-bottom: 40px;
 }
 
+.filter fieldset.price {
+	min-height: 93px;
+}
+
 .filter .price::before,
 .filter .color::before,
 .filter .bluetooth::before {
