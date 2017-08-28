@@ -95,6 +95,10 @@ body {
 	color: black;
 }
 
+.header-two {
+	font-weight: bold;
+}
+
 .visually-hidden {
 	position: absolute;
 	margin: 0;
