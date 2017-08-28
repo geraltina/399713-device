@@ -220,7 +220,7 @@ body {
 }
 
 .search-wrapper .search-field {
-	height: 16px;
+	height: 36px;
 	font-size: 15px;
 	line-height: 36px;
 	font-family: inherit;
@@ -1067,6 +1067,7 @@ input[name*="toggle"] {
 .about-us p {
 	margin-top: 0;
 	margin-bottom: 30px;
+	width: 500px;
 }
 
 .contacts p {
