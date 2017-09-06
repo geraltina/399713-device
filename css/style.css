@@ -122,8 +122,7 @@ body {
 }
 
 .index-header {
-	margin-bottom: 481px;
-	min-height: 298px;
+	min-height: 188px;
 }
 
 .page-header {
@@ -396,7 +395,7 @@ body {
 	padding-top: 30px;
 	padding-left: 80px;
 	width: 1080px;
-	min-height: 134px;
+	min-height: 136px;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
@@ -440,21 +439,23 @@ body {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
 	width: 1200px;
 }
 
 .sliders {
-	position: absolute;
-	top: -598px;
-	left: 110px;
-	margin-top: 6px;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 90px;
+	background-image: linear-gradient(#f7e296 0px, #f7e296 112px, #ffffff 112px);
 }
 
 .sliders::before {
 	content: "";
 	position: absolute;
 	top: 38px;
-	left: 510px;
+	left: 600px;
 	width: 100px;
 	height: 7px;
 	background-color: white;
@@ -467,6 +468,10 @@ body {
 
 input[name*="toggle"] {
 	display: none;
+}
+
+.slider-controls {
+	position: relative;
 }
 
 .slider-controls .slider {
@@ -514,8 +519,8 @@ input[name*="toggle"] {
 
 .promo-text .number {
 	position: absolute;
-	top: -12px;
-	left: 840px;
+	top: -14px;
+	left: 930px;
 	font-weight: bold;
 	font-size: 179.2px;
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -525,9 +530,9 @@ input[name*="toggle"] {
 }
 
 .promo-text .inline-right {
-	position: absolute;
-	top: 79px;
-	left: 510px;
+	position: relative;
+	margin-left: 510px;
+	margin-top: -417px;
 }
 
 .promo-text b {
@@ -550,10 +555,11 @@ input[name*="toggle"] {
 }
 
 .promo-text .upper-link {
-	position: absolute;
+	position: relative;
+	z-index: 0;
 	display: inline-block;
 	vertical-align: top;
-	top: 247px;
+	top: 54px;
 	padding-left: 43px;
 }
 
@@ -585,7 +591,7 @@ input[name*="toggle"] {
 
 .promo-item .promo-details {
 	position: relative;
-	top: -89px;
+	top: 105px;
 	left: 509px;
 	min-width: 445px;
 	max-width: 560px;
@@ -611,6 +617,7 @@ input[name*="toggle"] {
 
 .bigger-text td {
 	padding: 0;
+	padding-bottom: 7px;
 	font-weight: normal;
 	font-size: 36px;
 	line-height: 40px;
@@ -624,8 +631,14 @@ input[name*="toggle"] {
 	left: -50px;
 }
 
+.promo-three .inline-right {
+	position: relative;
+	margin-left: 510px;
+	margin-top: -265px;
+}
+
 .promo-three .promo-details {
-	top: 65px;
+	top: 105px;
 }
 
 .products-index {
@@ -643,6 +656,7 @@ input[name*="toggle"] {
 
 .products-index .products-group {
 	margin-right: 40px;
+	margin-top: 74px;
 	margin-bottom: 185px;
 	width: 160px;
 }
@@ -780,6 +794,7 @@ input[name*="toggle"] {
 	margin-left: auto;
 	margin-right: auto;
 	width: 1200px;
+	min-height: 288px;
 }
 
 .service-menu {
@@ -899,6 +914,7 @@ input[name*="toggle"] {
 .credit-service {
 	position: relative;
 	display: none;
+	min-height: 288px;
 }
 
 .delivery-service::after,
@@ -909,8 +925,8 @@ input[name*="toggle"] {
 }
 
 .delivery-service::after {
-	top: 5px;
-	right: -690px;
+	top: 12px;
+	right: -255px;
 	width: 136px;
 	height: 164px;
 	background-image: url(../img/delivery.svg);
@@ -918,8 +934,8 @@ input[name*="toggle"] {
 }
 
 .guarantee-service::after {
-	top: -22px;
-	right: -690px;
+	top: -12px;
+	right: -255px;
 	width: 171px;
 	height: 195px;
 	background-image: url(../img/warranty.svg);
@@ -927,8 +943,8 @@ input[name*="toggle"] {
 }
 
 .credit-service::after {
-	top: -22px;
-	right: -690px;
+	top: -12px;
+	right: -255px;
 	width: 156px;
 	height: 188px;
 	background-image: url(../img/credit.svg);
@@ -953,9 +969,8 @@ input[name*="toggle"] {
 .delivery-service .header-two,
 .guarantee-service .header-two,
 .credit-service .header-two {
-	position: absolute;
-	top: -5px;
 	margin: 0;
+	margin-top: -7px;
 	font-weight: bold;
 	font-size: 47px;
 	line-height: 47px;
@@ -966,9 +981,9 @@ input[name*="toggle"] {
 .delivery-service .service-text,
 .guarantee-service .service-text,
 .credit-service .service-text {
-	position: absolute;
-	top: 72px;
 	margin: 0;
+	margin-top: 33px;
+	margin-bottom: 10px;
 	width: 437px;
 }
 
@@ -1700,24 +1715,15 @@ input[name*="toggle"] {
 }
 
 .controller:active {
-	top: -10px;
-	border: 9px solid white;
+	transform: scale(1.1);
 }
 
 .controller-left {
 	left: -6px;
 }
 
-.controller-left:active {
-	left: -8px;
-}
-
 .controller-right {
 	left: 108px;
-}
-
-.controller-right:active {
-	left: 104px;
 }
 
 .price-number {
