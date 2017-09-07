@@ -448,6 +448,8 @@ body {
 	margin-left: 20px;
 	margin-right: 20px;
 	padding-left: 90px;
+	background-image: -webkit-linear-gradient(#f7e296 0px, #f7e296 112px, #ffffff 112px);
+	background-image: -o-linear-gradient(#f7e296 0px, #f7e296 112px, #ffffff 112px);
 	background-image: linear-gradient(#f7e296 0px, #f7e296 112px, #ffffff 112px);
 }
 
@@ -649,7 +651,8 @@ input[name*="toggle"] {
 	-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 			justify-content: space-between;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1160px;
@@ -995,7 +998,8 @@ input[name*="toggle"] {
 	-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 			justify-content: space-between;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 	margin-top: 95px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1062,7 +1066,7 @@ input[name*="toggle"] {
 	margin-bottom: 43px;
 	font-size: 47px;
 	line-height: 47px;
-	font-family:  "Gilroy", "Arial", sans-serif;
+	font-family: "Gilroy", "Arial", sans-serif;
 	color: black;
 }
 
@@ -1270,7 +1274,8 @@ input[name*="toggle"] {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 }
 
 .inline-top .wrapper {
@@ -1290,7 +1295,7 @@ input[name*="toggle"] {
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 18px;
-	font-family:  "Gilroy", "Arial", sans-serif;
+	font-family: "Gilroy", "Arial", sans-serif;
 	color: #000000;
 }
 
@@ -1305,7 +1310,7 @@ input[name*="toggle"] {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 0.4);
 	border: 0;
 	background-color: rgba(229, 229, 229, 0.5);
@@ -1320,7 +1325,7 @@ input[name*="toggle"] {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 0.4);
 	border: 0;
 	background-color: rgba(229, 229, 229, 0.5);
@@ -1329,56 +1334,56 @@ input[name*="toggle"] {
 .feedback-form .feedback-field::-moz-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 0.4);
 }
 
 .feedback-form .message-feedback::-moz-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 0.4);
 }
 
 .feedback-form .feedback-field::-webkit-input-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 0.4);
 }
 
 .feedback-form .message-feedback::-webkit-input-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 0.4);
 }
 
 .feedback-form .feedback-field:focus::-moz-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 1);
 }
 
 .feedback-form .message-feedback:focus::-moz-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 1);
 }
 
 .feedback-form .feedback-field:focus::-webkit-input-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 1);
 }
 
 .feedback-form .message-feedback:focus::-webkit-input-placeholder {
 	font-size: 14px;
 	line-height: 18px;
-	font-family:  "Open Sans", "Helvetica", sans-serif;
+	font-family: "Open Sans", "Helvetica", sans-serif;
 	color: rgba(70, 70, 70, 1);
 }
 
@@ -1390,7 +1395,8 @@ input[name*="toggle"] {
 .feedback-form .feedback-field:focus,
 .feedback-form .message-feedback:focus {
 	background-color: white;
-	box-shadow: inset 0 0 0 3px rgba(240, 197, 46, 0.5);
+	-webkit-box-shadow: inset 0 0 0 3px rgba(240, 197, 46, 0.5);
+			box-shadow: inset 0 0 0 3px rgba(240, 197, 46, 0.5);
 	outline: 1px solid rgba(240, 197, 46, 0.5);
 }
 
@@ -1716,7 +1722,9 @@ input[name*="toggle"] {
 }
 
 .controller:active {
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+			transform: scale(1.1);
 }
 
 .controller-left {
@@ -2371,7 +2379,8 @@ input[name*="toggle"] {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 	width: 325px;
 }
 
